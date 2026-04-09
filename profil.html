@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Sekolah | SDN Seda</title>
+    <meta name="description" content="Sejarah, Visi, dan Misi SD Negeri Seda">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/Logo SDN Seda.jpg" alt="Logo SDN Seda"
+                    style="width: 45px; height: 45px; object-fit: contain; border-radius: 8px;">
+                <span>SD Negeri Seda</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="profil.html" class="nav-link">Profil</a></li>
+                <li><a href="statistik.html" class="nav-link">Statistik</a></li>
+                <li><a href="fasilitas.html" class="nav-link">Fasilitas</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <button class="mobile-toggle">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header text-center">
+        <div class="header-shape shape-1"></div>
+        <div class="header-shape shape-2"></div>
+        <div class="container relative z-10 gsap-reveal">
+            <h1>Profil Sekolah</h1>
+            <p>Mengenal lebih dekat sejarah, visi, dan misi SD Negeri Seda</p>
+        </div>
+    </div>
+
+    <!-- History Section -->
+    <section class="py-20" style="background: var(--bg-white);">
+        <div class="container">
+            <!-- Sejarah & Kepsek Grid -->
+            <div class="grid-2" style="align-items: center; gap: 4rem;">
+                <div class="gsap-reveal">
+                    <h2 class="mb-4" style="font-size: 2.5rem; color: var(--primary-dark);">Sejarah Singkat</h2>
+                    <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.8;">SD Negeri Seda didirikan pada tahun 19XX dengan tujuan untuk menyediakan
+                        pendidikan dasar yang berkualitas bagi masyarakat sekitar. Saat ini, kami terus berkembang untuk
+                        memberikan layanan pendidikan terbaik berbasis teknologi dan nilai moral.</p>
+                </div>
+                
+                <div class="glass-card gsap-reveal" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; box-shadow: 0 20px 40px -10px rgba(37,99,235,0.4); border: none; position: relative; overflow: hidden;">
+                    <div style="font-size: 8rem; opacity: 0.1; position: absolute; top: -30px; right: 10px; line-height: 1; pointer-events: none;">
+                        <i class="ph ph-quotes"></i>
+                    </div>
+                    <h3 class="mb-4 text-white" style="position: relative; z-index: 1;">Kepala Sekolah</h3>
+                    <p class="mb-6" style="font-style: italic; color: rgba(255,255,255,0.9); font-size: 1.15rem; line-height: 1.6; position: relative; z-index: 1;">"Pendidikan bukan sekadar transfer ilmu,
+                        tetapi pembentukan karakter dan moral yang akan menjadi fondasi kehidupan mereka kelak."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem; position: relative; z-index: 1;">
+                        <div
+                            style="width: 55px; height: 55px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--primary); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <i class="ph ph-user" style="font-size: 1.75rem;"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white m-0" style="font-size: 1.2rem;">Sudirja</h4>
+                            <span style="opacity: 0.8; font-size: 0.9rem;">Kepala SD Negeri Seda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Identity Cards Grid -->
+            <div class="gsap-reveal" style="margin-top: 6rem;">
+                <div class="text-center mb-10">
+                    <h2 class="mb-2">Identitas Sekolah</h2>
+                    <p class="text-muted">Informasi dasar operasional SD Negeri Seda</p>
+                </div>
+                
+                <div class="grid-3 gsap-stagger-container">
+                    <div class="glass-card text-left" style="border-top: 4px solid var(--primary); display: flex; align-items: flex-start; gap: 1.25rem; background: var(--bg-light); transition: transform 0.3s ease;">
+                        <div style="font-size: 2.5rem; color: var(--primary); background: rgba(37,99,235,0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="ph ph-buildings"></i></div>
+                        <div>
+                            <p class="text-muted mb-1" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">NPSN & Status</p>
+                            <h4 class="mb-1" style="font-size: 1.25rem;">20213062</h4>
+                            <p class="m-0 text-muted" style="font-size: 0.95rem;">Kepemilikan: Negeri<br>Sekolah Dasar (SD)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card text-left" style="border-top: 4px solid var(--accent); display: flex; align-items: flex-start; gap: 1.25rem; background: var(--bg-light); transition: transform 0.3s ease;">
+                        <div style="font-size: 2.5rem; color: var(--accent); background: rgba(245,158,11,0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="ph ph-certificate"></i></div>
+                        <div>
+                            <p class="text-muted mb-1" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">Akreditasi & Kurikulum</p>
+                            <h4 class="mb-1" style="font-size: 1.25rem;">Akreditasi B</h4>
+                            <p class="m-0 text-muted" style="font-size: 0.95rem;">Kurikulum SD Merdeka</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card text-left" style="border-top: 4px solid var(--primary-light); display: flex; align-items: flex-start; gap: 1.25rem; background: var(--bg-light); transition: transform 0.3s ease;">
+                        <div style="font-size: 2.5rem; color: var(--primary-light); background: rgba(6,182,212,0.1); width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><i class="ph ph-clock"></i></div>
+                        <div>
+                            <p class="text-muted mb-1" style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">Waktu Belajar</p>
+                            <h4 class="mb-1" style="font-size: 1.25rem;">Pagi Hari</h4>
+                            <p class="m-0 text-muted" style="font-size: 0.95rem;">Penyelenggaraan:<br>5 Hari Kerja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="py-20" style="background: var(--bg-light); position: relative; overflow: hidden;">
+        <!-- Abstract background elements -->
+        <div
+            style="position: absolute; top: 10%; right: -5%; width: 300px; height: 300px; background: rgba(37,99,235,0.05); border-radius: 50%; border: 2px dashed rgba(37,99,235,0.2);">
+        </div>
+        <div
+            style="position: absolute; bottom: 10%; left: -5%; width: 200px; height: 200px; background: rgba(245,158,11,0.05); border-radius: 30%; transform: rotate(45deg);">
+        </div>
+
+        <div class="container relative z-10">
+            <div class="section-title gsap-reveal">
+                <h2>Visi & Misi</h2>
+                <p>Panduan arah gerak pendidikan di SD Negeri Seda</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Vision -->
+                <div class="glass-card gsap-reveal" style="text-align: center; border-top: 4px solid var(--accent);">
+                    <div
+                        style="width: 80px; height: 80px; border-radius: 50%; background: rgba(245,158,11,0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1.5rem;">
+                        <i class="ph ph-eye"></i>
+                    </div>
+                    <h3 class="mb-4">Visi</h3>
+                    <p class="text-muted" style="font-size: 1.125rem;">"Terwujudnya peserta didik yang cerdas, terampil,
+                        berkarakter mulia, dan berwawasan lingkungan hidup."</p>
+                </div>
+
+                <!-- Mission -->
+                <div class="glass-card gsap-reveal" style="border-top: 4px solid var(--primary);">
+                    <div
+                        style="width: 80px; height: 80px; border-radius: 50%; background: rgba(37,99,235,0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1.5rem;">
+                        <i class="ph ph-target"></i>
+                    </div>
+                    <h3 class="mb-4 text-center">Misi</h3>
+                    <ul style="padding-left: 1rem;">
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; align-items: start;">
+                            <i class="ph ph-check-circle" style="color: var(--primary); margin-top: 4px;"></i>
+                            <span class="text-muted">Menanamkan nilai-nilai keimanan dan ketakwaan kepada Tuhan
+                                YME.</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; align-items: start;">
+                            <i class="ph ph-check-circle" style="color: var(--primary); margin-top: 4px;"></i>
+                            <span class="text-muted">Melaksanakan pembelajaran aktif, inovatif, kreatif, efektif, dan
+                                menyenangkan (PAIKEM).</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem; align-items: start;">
+                            <i class="ph ph-check-circle" style="color: var(--primary); margin-top: 4px;"></i>
+                            <span class="text-muted">Meningkatkan prestasi akademik dan non-akademik siswa.</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: start;">
+                            <i class="ph ph-check-circle" style="color: var(--primary); margin-top: 4px;"></i>
+                            <span class="text-muted">Menciptakan lingkungan sekolah yang bersih, sehat, dan
+                                nyaman.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo mb-4" style="color: white; display: flex; align-items: center;">
+                        <img src="assets/Logo SDN Seda.jpg" alt="Logo SDN Seda"
+                            style="width: 45px; height: 45px; object-fit: contain; margin-right: 0.75rem;">
+                        <span style="font-size: 1.5rem; font-weight: 700; font-family: var(--font-heading);">SDN
+                            Seda</span>
+                    </div>
+                    <p>Membentuk generasi cerdas, berkarakter, dan siap menghadapi tantangan masa depan dengan
+                        pendidikan berbasis nilai moral.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil Sekolah</a></li>
+                        <li><a href="statistik.html">Statistik</a></li>
+                        <li><a href="fasilitas.html">Fasilitas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hubungi Kami</h3>
+                    <ul class="footer-links">
+                        <li><i class="ph ph-map-pin mr-2"></i> Jl. Pendidikan No. 123, Seda</li>
+                        <li><i class="ph ph-phone mr-2"></i> (021) 1234-5678</li>
+                        <li><i class="ph ph-envelope mr-2"></i> info@sdnseda.sch.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SD Negeri Seda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

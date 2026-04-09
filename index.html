@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda | SD NEGERI Seda</title>
+    <meta name="description" content="Website Resmi SD Negeri Seda - Membangun generasi cerdas dan berkarakter.">
+
+    <!-- Icons (Phosphor Icons) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Specific adjustments for Hero with ThreeJS */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: var(--nav-height);
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .stat-item p {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+
+        /* Quick features */
+        .features-section {
+            padding: 8rem 0;
+            background-color: white;
+            position: relative;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            background: var(--bg-light);
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <!-- Ganti assets/logo.png dengan nama file logo Anda di folder assets -->
+                <img src="assets/Logo SDN Seda.jpg" alt="Logo SDN Seda"
+                    style="width: 45px; height: 45px; object-fit: contain; border-radius: 8px;">
+                <span>SD Negeri Seda</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="profil.html" class="nav-link">Profil</a></li>
+                <li><a href="statistik.html" class="nav-link">Statistik</a></li>
+                <li><a href="fasilitas.html" class="nav-link">Fasilitas</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <button class="mobile-toggle">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero"
+        style="background: var(--bg-light); padding-top: calc(var(--nav-height) + 2rem); padding-bottom: 4rem;">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: 4rem;">
+                <div class="hero-content gsap-reveal" style="max-width: 100%;">
+                    <div class="inline-badge mb-4 text-primary font-bold"
+                        style="background: rgba(37,99,235,0.1); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block;">
+                        Selamat Datang di Website Resmi
+                    </div>
+                    <h1>Membentuk Generasi Cerdas & Berkarakter</h1>
+                    <p>SD Negeri Seda berkomitmen memberikan pendidikan terbaik dengan mengedepankan nilai-nilai moral,
+                        kreativitas, dan inovasi di era digital.</p>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="profil.html" class="btn btn-primary">
+                            Jelajahi Profil <i class="ph ph-arrow-right"></i>
+                        </a>
+                        <a href="kontak.html" class="btn btn-outline">
+                            Hubungi Kami
+                        </a>
+                    </div>
+
+                    <div class="hero-stats gsap-stagger-container">
+                        <div class="stat-item">
+                            <h3><span class="counter-val" data-target="24">0</span>+</h3>
+                            <p>Tenaga Pendidik</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3><span class="counter-val" data-target="350">0</span>+</h3>
+                            <p>Total Siswa</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3><span class="counter-val" data-target="15">0</span>+</h3>
+                            <p>Prestasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image gsap-reveal" style="position: relative;">
+                    <!-- Ganti assets/foto-staff.jpg dengan foto asli bersama guru/staff -->
+                    <div style="position: relative; padding-bottom: 1.5rem; padding-right: 1.5rem;">
+                        <div
+                            style="position: absolute; bottom: 0; right: 0; width: 80%; height: 80%; background: var(--primary-light); border-radius: 24px; z-index: 0; opacity: 0.3;">
+                        </div>
+                        <div
+                            style="position: absolute; top: 1.5rem; right: 1.5rem; width: 100%; height: 100%; border: 2px dashed var(--primary); border-radius: 24px; z-index: 0;">
+                        </div>
+                        <img src="assets/foto-staff.jpg" alt="Staff SDN Seda"
+                            style="width: 100%; height: auto; object-fit: cover; border-radius: 24px; position: relative; z-index: 10; box-shadow: var(--shadow-lg); display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Snippet -->
+    <section class="py-20" style="background: white;">
+        <div class="container">
+            <div class="grid-2" style="align-items: center;">
+                <div class="about-image gsap-reveal">
+                    <!-- Ganti assets/foto-sekolah.jpg dengan foto asli profil/depan sekolah Anda -->
+                    <img src="assets/foto-sekolah.jpg" alt="Foto Gedung SD Negeri Seda"
+                        style="width: 100%; height: 400px; object-fit: cover; border-radius: 24px; box-shadow: var(--shadow-md); display: block;">
+                </div>
+                <div class="about-text gsap-reveal">
+                    <h2 class="mb-4" style="font-size: 2.5rem; line-height: 1.2;">Pendidikan Berkualitas untuk Masa
+                        Depan Cerah</h2>
+                    <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="text-muted mb-8">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur.</p>
+                    <a href="profil.html" class="btn btn-outline">Baca Sejarah Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title gsap-reveal">
+                <h2>Layanan & Informasi</h2>
+                <p>Akses cepat ke berbagai informasi penting SD Negeri Seda</p>
+            </div>
+
+            <div class="grid-3 gsap-stagger-container">
+                <div class="feature-card">
+                    <i class="ph ph-users-three feature-icon"></i>
+                    <h3 class="mb-2">Data Guru & Siswa</h3>
+                    <p class="text-muted mb-4">Informasi lengkap mengenai tenaga pendidik dan statistik persebaran
+                        siswa.</p>
+                    <a href="statistik.html" class="text-primary font-bold">Lihat Statistik <i
+                            class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <i class="ph ph-buildings feature-icon"></i>
+                    <h3 class="mb-2">Fasilitas Sekolah</h3>
+                    <p class="text-muted mb-4">Mulai dari ruang kelas yang nyaman hingga perpustakaan yang lengkap.</p>
+                    <a href="fasilitas.html" class="text-primary font-bold">Lihat Fasilitas <i
+                            class="ph ph-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <i class="ph ph-book-open feature-icon"></i>
+                    <h3 class="mb-2">Visi & Misi</h3>
+                    <p class="text-muted mb-4">Tujuan dan komitmen kami dalam mencetak generasi penerus bangsa.</p>
+                    <a href="profil.html" class="text-primary font-bold">Baca Selengkapnya <i
+                            class="ph ph-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri Kegiatan Section -->
+    <section class="py-20" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title gsap-reveal">
+                <h2>Galeri Kegiatan & Prestasi</h2>
+                <p>Dokumentasi aktivitas, prestasi, dan momen berharga pencapaian SD Negeri Seda</p>
+            </div>
+
+            <!-- CSS for Gallery Grid -->
+            <style>
+                .gallery-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                    gap: 2rem;
+                }
+
+                .gallery-card {
+                    background: white;
+                    border-radius: var(--radius-lg);
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+                    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+                }
+
+                .gallery-card:hover {
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+                }
+
+                .gallery-img-wrap {
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                    overflow: hidden;
+                }
+
+                .gallery-img-wrap img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.6s ease;
+                }
+
+                .gallery-card:hover .gallery-img-wrap img {
+                    transform: scale(1.08);
+                }
+
+                .gallery-content {
+                    padding: 1.5rem;
+                }
+
+                .gallery-title {
+                    font-size: 1.1rem;
+                    color: var(--text-main);
+                    margin-bottom: 0.5rem;
+                    line-height: 1.4;
+                    font-weight: 700;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+
+                .gallery-tag {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    background: rgba(37, 99, 235, 0.1);
+                    color: var(--primary);
+                    padding: 0.35rem 0.8rem;
+                    border-radius: 20px;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 1rem;
+                }
+            </style>
+
+            <div class="gallery-grid gsap-stagger-container">
+                <!-- Item 1 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Alhamdulillah SDN Seda Juara dalam kegiatan Pramuka se Kecamatan Mandirancan.jpg"
+                            alt="Juara Pramuka">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag"><i class="ph ph-trophy"></i> Prestasi</div>
+                        <h4 class="gallery-title">Juara Kegiatan Pramuka se-Kecamatan Mandirancan</h4>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Kegiatan Jumat Pagi Yasinan dan Shalat Dhuha.jpg" alt="Jumat Pagi">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(16,185,129,0.1); color: #10b981;"><i
+                                class="ph ph-mosque"></i> Kerohanian</div>
+                        <h4 class="gallery-title">Kegiatan Rutin Jumat Pagi: Yasinan dan Shalat Dhuha</h4>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Alhamdulillah 2 orang siswa SDN SEDA mengikuti Wisuda Tahfidz Quran Juz 30 di TK. Kecamatan Man.jpg"
+                            alt="Wisuda Tahfidz">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(245,158,11,0.1); color: var(--accent);"><i
+                                class="ph ph-star"></i> Kebanggaan</div>
+                        <h4 class="gallery-title">Wisuda Tahfidz Quran Juz 30 Tingkat Kecamatan</h4>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Ujian Praktik Ilmu Pengetahuan AlamTema - Solar SystemMateri - Membuat Diorama Tata Surya (1).jpg"
+                            alt="Ujian Praktik IPA">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(139,92,246,0.1); color: #8b5cf6;"><i
+                                class="ph ph-flask"></i> Akademik</div>
+                        <h4 class="gallery-title">Ujian Praktik IPA: Membuat Diorama Tata Surya</h4>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Diskusi Kelompok Terpumpun bersama BBGP Jawa Barat @ hotelsantikapremierlinggarjati.jpg"
+                            alt="Diskusi Guru">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(37,99,235,0.1); color: var(--primary);"><i
+                                class="ph ph-users"></i> Guru & SDM</div>
+                        <h4 class="gallery-title">Diskusi Kelompok Terpumpun bersama BBGP Jawa Barat</h4>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Alhamdulillah Ananda Aghniya Rahma Dinar mewakili SDN Seda untuk mengikuti lomba kaulinan baruda.jpg"
+                            alt="Lomba Kaulinan">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(236,72,153,0.1); color: #ec4899;"><i
+                                class="ph ph-medal"></i> Lomba Siswa</div>
+                        <h4 class="gallery-title">Perwakilan Sekolah dalam Lomba Tingkat Daerah</h4>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Pelepasan siswa siswi SDN SEDA Tahun Pelajaran 2022-2023.jpg"
+                            alt="Pelepasan Siswa">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(6,182,212,0.1); color: #06b6d4;"><i
+                                class="ph ph-confetti"></i> Seremoni</div>
+                        <h4 class="gallery-title">Pelepasan Siswa-siswi Kelas VI Tahun Ajaran Lalu</h4>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="gallery-card">
+                    <div class="gallery-img-wrap">
+                        <img src="assets/Kelas 6.jpg" alt="Kelas VI">
+                    </div>
+                    <div class="gallery-content">
+                        <div class="gallery-tag" style="background: rgba(37,99,235,0.1); color: var(--primary);"><i
+                                class="ph ph-student"></i> Kelas VI</div>
+                        <h4 class="gallery-title">Momen Kebersamaan Siswa Kelas VI SDN Seda</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo mb-4" style="color: white; display: flex; align-items: center;">
+                        <!-- Logo difooter (logo-putih.png) jika ada, jika tidak otomatis fallback ke logo.png -->
+                        <img src="assets/Logo SDN Seda.jpg" alt="Logo SDN Seda"
+                            style="width: 45px; height: 45px; object-fit: contain; margin-right: 0.75rem;">
+                        <span style="font-size: 1.5rem; font-weight: 700; font-family: var(--font-heading);">SDN
+                            Seda</span>
+                    </div>
+                    <p>Membentuk generasi cerdas, berkarakter, dan siap menghadapi tantangan masa depan dengan
+                        pendidikan berbasis nilai moral.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#" class="social-icon"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#" class="social-icon"><i class="ph ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Tautan Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil Sekolah</a></li>
+                        <li><a href="statistik.html">Statistik</a></li>
+                        <li><a href="fasilitas.html">Fasilitas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Informasi</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Berita Terbaru</a></li>
+                        <li><a href="#">Galeri Kegiatan</a></li>
+                        <li><a href="#">PPDB Online</a></li>
+                        <li><a href="#">E-Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hubungi Kami</h3>
+                    <ul class="footer-links">
+                        <li><i class="ph ph-map-pin mr-2"></i> Jl. Pendidikan No. 123, Seda</li>
+                        <li><i class="ph ph-phone mr-2"></i> (021) 1234-5678</li>
+                        <li><i class="ph ph-envelope mr-2"></i> info@sdnseda.sch.id</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SD Negeri Seda. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    ER
+</body>
+
+</html>
